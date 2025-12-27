@@ -1,5 +1,6 @@
 .logoloop {
   position: relative;
+  overflow: hidden;
 
   --logoloop-gap: 32px;
   --logoloop-logoHeight: 44px;
@@ -182,6 +183,39 @@
   .logoloop__item img,
   .logoloop__node {
     transition: none !important;
+  }
+}
+/* Responsive adjustments for small screens */
+@media (max-width: 640px) {
+  .logoloop {
+    --logoloop-gap: 16px;
+    --logoloop-logoHeight: 32px;
+  }
+
+  .logoloop__track {
+    /* ensure the track doesn't force horizontal scrolling on small screens */
+    will-change: transform;
+  }
+
+  .logoloop__item {
+    margin-right: var(--logoloop-gap);
+  }
+
+  .logoloop__item img {
+    height: var(--logoloop-logoHeight);
+    max-height: 36px;
+  }
+}
+
+@media (max-width: 420px) {
+  .logoloop {
+    --logoloop-gap: 12px;
+    --logoloop-logoHeight: 28px;
+  }
+
+  .logoloop__item img {
+    height: var(--logoloop-logoHeight);
+    max-height: 32px;
   }
 }
 .logo-loop{overflow:hidden;padding:12px 0;background:transparent}
