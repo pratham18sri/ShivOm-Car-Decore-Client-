@@ -1,0 +1,7 @@
+.rotating-wrap{display:inline-block;min-width:160px}
+.rotating-text{display:inline-block;font-weight:300;color:#fff;font-size:1.05rem;opacity:0;transform:translateY(.15rem);animation:rotFade 1s ease-in-out forwards}
+@keyframes rotFade{
+  0%{opacity:0;transform:translateY(.2rem)}
+  40%{opacity:1;transform:translateY(0)}
+  100%{opacity:1;transform:translateY(0)}
+}

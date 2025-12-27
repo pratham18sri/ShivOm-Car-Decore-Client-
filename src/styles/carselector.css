@@ -1,0 +1,4 @@
+.car-selector form{display:flex;flex-direction:column;gap:.75rem}
+.car-selector label{color:#374151;font-size:0.95rem}
+.car-selector .select{padding:8px;border:1px solid #e5e7eb;border-radius:6px}
+.car-selector .btn{background:#2563eb;color:#fff;padding:.5rem 1rem;border-radius:6px;border:none;cursor:pointer}
