@@ -1,4 +1,43 @@
-.car-selector form{display:flex;flex-direction:column;gap:.75rem}
-.car-selector label{color:#374151;font-size:0.95rem}
-.car-selector .select{padding:8px;border:1px solid #e5e7eb;border-radius:6px}
-.car-selector .btn{background:#2563eb;color:#fff;padding:.5rem 1rem;border-radius:6px;border:none;cursor:pointer}
+/* ── Car Selector ── */
+.car-selector form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.car-selector label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.car-selector .select {
+  padding: 10px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.car-selector .select:focus {
+  border-color: var(--primary);
+}
+
+.car-selector .btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.car-selector .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px var(--primary-glow);
+}

@@ -8,12 +8,18 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: '#2563EB' // blue-600 main
+                    DEFAULT: '#e63946'
                 },
                 whatsapp: '#25D366',
                 brand: {
-                  light: '#f0f7ff'
-                }
+                  light: '#12121a'
+                },
+                dark: '#0a0a0f',
+                card: '#12121a',
+            },
+            fontFamily: {
+                display: ['Orbitron', 'sans-serif'],
+                body: ['Poppins', 'system-ui', 'sans-serif'],
             }
         },
     },

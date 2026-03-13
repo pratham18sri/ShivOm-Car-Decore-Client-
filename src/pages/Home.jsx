@@ -18,6 +18,28 @@ export default function Home(){
     <div>
       <Hero />
 
+      {/* Stats Bar */}
+      <section className="section">
+        <div className="stats-bar">
+          <div className="stat-item">
+            <span className="stat-number">20+</span>
+            <span className="stat-label">Years Experience</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">5000+</span>
+            <span className="stat-label">Cars Fitted</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">13+</span>
+            <span className="stat-label">Brands Covered</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">100%</span>
+            <span className="stat-label">Custom Fit</span>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <h2 className="section-title">Featured Products</h2>
         <div className="featured-grid">
@@ -27,12 +49,12 @@ export default function Home(){
 
       <section className="section">
         <h2 className="section-title">Our Partner Brands</h2>
-        <div style={{padding:'12px 0'}}>
+        <div style={{padding:'16px 0'}}>
           <LogoLoop
             logos={carData.map(b=> ({ src: b.logo, alt: b.brand, title: b.brand }))}
             speed={80}
             logoHeight={48}
-            gap={32}
+            gap={40}
             fadeOut={false}
             scaleOnHover={true}
             ariaLabel="Car brand partners"
@@ -42,7 +64,7 @@ export default function Home(){
 
       <section className="section">
         <h2 className="section-title">What Our Customers Say</h2>
-        <div style={{padding:'12px 0'}}>
+        <div style={{padding:'16px 0'}}>
           <TestimonialsLoop
             reviews={[
               { name: 'Neha K.', text: 'Excellent quality and perfect fit for my Swift. Highly recommended!', rating: 5 },
@@ -68,6 +90,12 @@ export default function Home(){
             <div className="why-card">Local Trusted Shop</div>
             <div className="why-card">Professional Installation</div>
           </div>
+
+          {/* Guarantee Banner */}
+          <div className="guarantee-banner">
+            <h3>Quality Guarantee</h3>
+            <p>Every product is crafted with premium materials and installed with precision. We stand behind every fitting with our quality assurance promise.</p>
+          </div>
         </div>
       </section>
 
@@ -78,7 +106,7 @@ export default function Home(){
             <iframe title="Shop Location" src="https://www.google.com/maps?q=Bhagwaan%20Talkiesh%2C%20Kripal%20Colony%2C%20Sanjay%20Nagar%2C%20Pashupati%20Colony%2C%20Khandari%2C%20Agra%2C%20Uttar%20Pradesh%20282002&output=embed" className="map-embed" loading="lazy" />
           </div>
           <div>
-            <p style={{fontWeight:600}}>ShivOm Car Seat Covers</p>
+            <p style={{fontWeight:600,color:'var(--text-primary)'}}>ShivOm Car Seat Covers</p>
             <p className="muted">Owner: Ram Srivastav, Jagat Srivastav</p>
             <p className="muted">Phone: +91 9897874613</p>
             <p className="muted" style={{marginTop:6}}>Address: Bhagwaan Talkiesh, Kripal Colony, Sanjay Nagar, Pashupati Colony, Khandari, Agra, Uttar Pradesh 282002</p>

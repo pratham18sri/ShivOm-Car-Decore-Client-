@@ -1,13 +1,175 @@
-.section { padding: 2.5rem 1rem; max-width:72rem; margin:0 auto }
-.section-title { font-size:1.5rem; font-weight:600; color:#0b63d6 }
-.featured-grid { display:grid; grid-template-columns:repeat(1,1fr); gap:1rem; margin-top:1rem }
-@media(min-width:640px){ .featured-grid{ grid-template-columns:repeat(2,1fr) } }
-@media(min-width:1024px){ .featured-grid{ grid-template-columns:repeat(4,1fr) } }
-.why-section { background:#f0f7ff; padding:2rem 1rem }
-.why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1rem }
-@media(min-width:640px){ .why-grid{ grid-template-columns:repeat(3,1fr) } }
-.why-card{ background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.06); text-align:center }
-.visit-grid{ display:grid; grid-template-columns:1fr; gap:1rem }
-@media(min-width:768px){ .visit-grid{ grid-template-columns:1fr 1fr } }
-.map-embed{ width:100%; height:100%; border:0 }
-.muted { color:#6b7280 }
+/* ── Home Page ── */
+.section {
+  padding: 3.5rem 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+@media(min-width: 640px) { .featured-grid { grid-template-columns: repeat(2, 1fr) } }
+@media(min-width: 1024px) { .featured-grid { grid-template-columns: repeat(4, 1fr) } }
+
+/* ── Why Choose Us ── */
+.why-section {
+  background: var(--bg-section-alt);
+  padding: 3rem 1rem;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media(min-width: 640px) { .why-grid { grid-template-columns: repeat(3, 1fr) } }
+@media(min-width: 900px) { .why-grid { grid-template-columns: repeat(5, 1fr) } }
+
+.why-card {
+  background: var(--bg-card);
+  padding: 1.25rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-smooth);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.why-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── Visit Section ── */
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media(min-width: 768px) { .visit-grid { grid-template-columns: 1fr 1fr } }
+
+.map-embed {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  border: 0;
+  border-radius: var(--radius);
+  filter: grayscale(0.3) brightness(0.85);
+}
+
+.muted { color: var(--text-muted); }
+
+/* ── Guarantee Banner ── */
+.guarantee-banner {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-section-alt) 100%);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.guarantee-banner h3 {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.guarantee-banner p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media(min-width: 640px) { .stats-bar { grid-template-columns: repeat(4, 1fr) } }
+
+.stat-item {
+  text-align: center;
+  padding: 1.25rem 0.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  display: block;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.3rem;
+  display: block;
+}
